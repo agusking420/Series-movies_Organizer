@@ -11,6 +11,7 @@ public class Episodios
     private int capituloDuracion;
     private String name;
     private int fechaEstreno;
+    private boolean visto;
  
     /**
      * Constructor for objects of class Movie
@@ -38,6 +39,7 @@ public class Episodios
         this.name = name;
         this.fechaEstreno = fechaEstreno;
         this.capituloDuracion = capituloDuracion;
+        this.visto = false;
     }
     
     
@@ -63,6 +65,7 @@ public class Episodios
         this.name = "episode " + capitulo;
         this.fechaEstreno = fechaEstreno;
         this.capituloDuracion = capituloDuracion;
+        this.visto = false;
     }
 
     /**
@@ -108,6 +111,14 @@ public class Episodios
      */
     public int getDurationCaps(int capitulo){
         return capituloDuracion;
+    }
+    
+    
+    /**
+     * este metodo marca como "visto" un episodio
+     */
+    public void marcarVisto(){
+        this.visto = true;
     }
     
     /**

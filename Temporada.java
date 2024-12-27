@@ -99,8 +99,10 @@ public class Temporada
      * invariable de clase
      */
     public boolean repOk(){
-        if(capitulos < 0){
-            return false;
+        for(Episodios e : capitulos){
+            if(e == null || !e.repOk()){ //que los capitulos no sean nulos y sean internamente consistentes
+                return false;
+            }
         }
         if(fechaEstreno < 0){
             return false;
